@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Aplikasi e-wallet sederhana</h1>
+        </div>
+
+        <div class="main">
+            <div class="menu">
+                <!-- Bagian topup -->
+                <div class="topup">
+                    <h1>Topup</h1>
+                    <form class="topup-form" onsubmit="return topupFormHandler(event)">
+                        <label for="pilih_user">Pilih User</label>
+                        <input type="text" name="pilih_user">
+                        <label for="pilih_nominal_tp">Masukkan nominal</label>
+                        <input type="text" name="pilih_nominal_tp">
+                        <button type="submit" class="btn-topup">Submit</button>
+                    </form>
+                </div>
+                <!-- End topup -->
+                
+                <!-- Bagian transfer -->
+                <div class="transfer">
+                    <h1>Transfer</h1>
+                    <form class="transfer-form" onsubmit="return transferFormHandler(event)">
+                        <label for="pilih_pengirim">Pilih pengirim</label>
+                        <input type="text" name="pilih_pengirim">
+                        <label for="pilih_penerima">Pilih penerima</label>
+                        <input type="text" name="pilih_penerima">
+                        <label for="pilih_nominal_tf">Masukkan nominal</label>
+                        <input type="text" name="pilih_nominal_tf">
+                        <button type="submit" class="btn-topup">Submit</button>
+                    </form>
+                </div>
+                <!-- End transfer -->
+            </div>
+
+            <div class="data">
+                <!-- Bagian user balance -->
+                <div class="user-balance data-divider">
+                    <h1>User Balance</h1>
+                    <table id="table-user-balance">
+                        <tr>
+                            <th>UserId</th>
+                            <th>Username</th>
+                            <th>Saldo</th>
+                        </tr>
+                        <!-- DATA DIBAWAH INI DI GENERATE LEWAT SCRIPT -->
+                        
+                        <!-- END -->
+                    </table>
+                </div>
+                <!-- End user balance -->
+                
+                <!-- Bagian topup history -->
+                <div class="topup-history data-divider">
+                    <h1>Topup History</h1>
+                    <table id="table-topup-history">
+                        <tr>
+                            <th>TrxId</th>
+                            <th>UserId</th>
+                            <th>Username</th>
+                            <th>Nominal</th>
+                        </tr>
+                        <!-- DATA DIBAWAH INI DI GENERATE LEWAT SCRIPT -->
+                        
+                        <!-- END -->
+                    </table>
+                </div>
+                <!-- End topup history -->
+                
+                <!-- Bagian transfer history -->
+                <div class="transfer-history data-divider">
+                    <h1>Transfer History</h1>
+                    <table id="table-transfer-history">
+                        <tr>
+                            <th>TrxId</th>
+                            <th>From UserId</th>
+                            <th>To UserId</th>
+                            <th>Nominal</th>
+                        </tr>
+                        <!-- DATA DIBAWAH INI DI GENERATE LEWAT SCRIPT -->
+                        
+                        <!-- END -->
+                    </table>
+                </div>
+                <!-- End transfer history -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
